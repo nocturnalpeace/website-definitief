@@ -1,0 +1,305 @@
+/*********/
+/* FONTS */
+/*********/
+
+
+@font-face {
+    font-family: SourceSans;
+    src: url(../assets/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: SourceSans-bold; 
+    src: url(../assets/SourceSansPro-Bold.otf);
+}
+
+
+/********************/
+/* ALGEMENE STIJLEN */
+/********************/
+
+* {
+    font-family: SourceSans;
+    margin:0;
+    padding:0;
+}
+
+/***********/
+/* DE BODY */
+/***********/
+body{
+    background:rgb(15, 15, 15);
+    color: white;
+}
+
+
+/* DE BODY OP DE HOMEPAGE */
+
+body.index {
+    background-image: url(../images/underground.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* zodat de h1 niet uitsteekt als die rondjes draait */
+    overflow: hidden;
+}
+
+
+
+/*************/
+/* DE HEADER */
+/*************/
+
+header{
+    background-color: greenyellow;
+    padding: 1em;
+}
+
+header nav{
+    width: 80%;
+    margin:auto;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 10px;
+    align-items: center;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 1em;
+}
+
+header nav ul li a:hover{
+    padding: .2em;
+    border: 0.1em solid black;
+    margin: .7em;
+}
+
+
+
+
+
+/**********/
+/* FOOTER */
+/**********/
+footer{
+    background: black;
+    padding: 1em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/***********/
+/* DE MAIN */
+/***********/
+main{
+    width: 80%;
+    margin: auto;
+
+    /* was om te clearen */
+    /* had Sanne toegevoegd */
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+/* de main op de homepage */
+.index main{
+    height: 90vh;
+
+    /* h1 (mijn kind) in het midden van de main */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/************/
+/* SECTIONS */
+/************/
+
+
+
+
+/*  section met een klas */
+
+/* section.naast-elkaar {
+    display: flex;
+    padding-top: 2em;
+    align-items: start;
+} */
+
+
+
+
+/***********/
+/* CONTENT */
+/***********/
+
+/* KOPJES */
+h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 1em;
+    font-family: SourceSans-bold; 
+    color: white;
+    text-shadow: greenyellow 1px 0 10px;
+}
+
+/* bijzondere h1 op de homepage */
+body.index h1 {
+    font-size: 8em;
+    color: greenyellow;
+    /* margin: 0; */
+
+    animation-name: draaien;
+    animation-duration: 7s;
+}
+
+@keyframes draaien {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
+h2 {
+    font-size: 2.1em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h3{
+    font-family: SourceSans-bold; 
+    color: darkcyan;
+    padding: 1em 0em 0.5em 0em;
+}
+
+/* tekst */
+p {
+    margin-bottom: 1.5em;
+}
+
+
+
+/* plaatjes */
+
+section, 
+iframe {
+    clear:both;
+    margin-top:2em;
+}
+
+ /* clear both:  zorgt voor ruimte boven de section en iframe video op de pagina zodat het plaatje niet botst met de iframe eronder */
+
+section img {
+    width: 60%;
+    margin-left: 4em;
+}
+
+.geschiedenis div {
+    display: flex;
+}
+
+.geschiedenis  img {
+    width: 40%;
+}
+
+.geschiedenis section:nth-of-type(1) div {
+    flex-flow: row-reverse;
+}
+
+.geschiedenis section:nth-of-type(1) div img {
+    height: min-content;
+}
+
+.geschiedenis section:nth-of-type(2) img {
+    height: auto;
+    width: 50%;
+    float: right;
+}
+
+.opkomst section:nth-of-type(2) img {
+    height: auto;
+    width: 59%;
+}
+
+/* img {
+    width:100%;
+}
+
+img.klein {
+    width: 300px;
+    margin:2em;
+}
+
+img.links{
+    float:left;
+}
+
+img.rechts{
+    float:right;
+} */
+
+
+/* videos */
+video{
+    width:70%;
+}
+
+
+/* form */
+form{
+    border:solid 2px white;
+    padding:1em;
+    border-radius:.25em;
+    width:fit-content;
+}
+
+/* label met tekstveld */
+form label{
+    display: block;
+    margin-bottom: 0.75em;
+}
+
+form label input {
+    font-size:1em;  
+    padding:.25em;
+}
+
+/* button */
+button {
+    background-color: darkcyan;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    width:100%;
+    margin-top:.75em;
+}
+
+form :focus{
+    box-shadow: 0 0 0 .1em greenyellow;
+    outline: none;
+}
+
+a{
+    color: greenyellow;
+}
+
