@@ -193,9 +193,11 @@ p {
     margin-bottom: 1.5em;
 }
 
+.groei p{
+    margin-right: 20em;
+}
 
-
-/* plaatjes */
+/* foto's op website */
 
 section, 
 iframe {
@@ -228,7 +230,7 @@ section img {
 
 .geschiedenis section:nth-of-type(2) img {
     height: auto;
-    width: 50%;
+    width: 40%;
     float: right;
 }
 
